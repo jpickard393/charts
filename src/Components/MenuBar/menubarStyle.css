@@ -1,0 +1,9 @@
+.nav-item {
+  padding: 10px;
+}
+.nav-item a {
+  color: yellow;
+}
+.nav-item a:hover {
+  color: white;
+}

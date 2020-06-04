@@ -1,0 +1,25 @@
+{
+  "charts": {
+    "bullish": {
+      "images": [
+        {
+          "id": "1",
+          "name": "",
+          "description": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "description": ""
+        },
+        {
+          "id": "1",
+          "name": "",
+          "description": ""
+        }
+      ]
+    },
+    "bearish": {},
+    "neutral": {}
+  }
+}
