@@ -23,7 +23,7 @@ const ChartTable = (props) => {
         console.log(uri);
     }, []);
 
-    const bullishCharts = dataList.map(
+    const charts = dataList.map(
         function (item) {
 
             let row = <tr><td><a className="chartName">{item.name}</a></td><td><img className="imgThumnail" src={item.imageUrl} alt={item.name} /></td></tr>;
@@ -43,7 +43,7 @@ const ChartTable = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {bullishCharts}
+                    {charts}
                 </tbody>
             </Table>
             <div id='resultSpan'>
