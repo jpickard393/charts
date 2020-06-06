@@ -1,0 +1,16 @@
+.imgThumnail {
+  width: 180px;
+  height: 150px;
+}
+
+.tblHeaderName {
+  width: 300px;
+}
+
+.tblHeaderImg {
+  width: 300px;
+}
+
+.chartName {
+  font-size: 2rem;
+}
