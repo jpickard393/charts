@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import './bullishStyle.css';
+import './chartStyle.css';
 import { Table, Container } from 'reactstrap';
 
-const ChatTable = () => {
+const ChartTable = (props) => {
     const [dataList, setDataList] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const chartType = 1;
 
-    useEffect((props) => {
-        let uri = 'http://10.211.55.4:8080/api/chart/getbytypeid?id=' + chartType;
+    useEffect(() => {
+        let uri = props.uri + props.chartType;
         const resultSpan = document.getElementById('resultSpan');
-
-        setIsLoading(true);
 
         // get the data from the api, and store it in the dataList array of state.
         fetch(uri, {
@@ -24,6 +20,7 @@ const ChatTable = () => {
             .then(data => setDataList(data)
             )
             .catch(error => resultSpan.innerText = error)
+        console.log(uri);
     }, []);
 
     const bullishCharts = dataList.map(
@@ -36,7 +33,7 @@ const ChatTable = () => {
     return (
         <div>
             <Container fluid>
-                <h1>Bullish Charts</h1>
+                <h1>{props.pageTitle}</h1>
             </Container>
             <Table hover responsive>
                 <thead>
@@ -54,4 +51,4 @@ const ChatTable = () => {
         </div>
     )
 }
-export default Bullish;
+export default ChartTable;
