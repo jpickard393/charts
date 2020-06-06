@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './bullishStyle.css';
 import { Table, Container } from 'reactstrap';
 
-const Bullish = () => {
+const ChatTable = () => {
     const [dataList, setDataList] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const chartType = 1;
 
-    useEffect(() => {
+    useEffect((props) => {
         let uri = 'http://10.211.55.4:8080/api/chart/getbytypeid?id=' + chartType;
         const resultSpan = document.getElementById('resultSpan');
 
